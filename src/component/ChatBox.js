@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Message from "./Message";
 import CloseIcon from "./CloseIcon";
 import ChatInput from "./Chatinput";
-import axios from "axios";
 
 let nextId = 0;
 function autosize(el) {
