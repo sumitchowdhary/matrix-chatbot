@@ -4,13 +4,7 @@ import Message from "./Message";
 import CloseIcon from "./CloseIcon";
 import ChatInput from "./Chatinput";
 
-let nextId = 0;
-function autosize(el) {
-  setTimeout(function () {
-    el.style.cssText = "height:auto;";
-    el.style.cssText = `height: ${el.scrollHeight}px;`;
-  }, 0);
-}
+
 
 const ChatBox = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([]);
