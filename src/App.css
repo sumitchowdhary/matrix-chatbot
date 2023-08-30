@@ -126,3 +126,49 @@
   max-height: 10rem;
   overflow: hidden;
 }
+
+.chat-app {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  padding: 20px;
+}
+
+.message-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.user {
+  background-color: #def3fd;
+  align-self: flex-end;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

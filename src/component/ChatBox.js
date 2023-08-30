@@ -4,8 +4,6 @@ import Message from "./Message";
 import CloseIcon from "./CloseIcon";
 import ChatInput from "./Chatinput";
 
-
-
 const ChatBox = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([]);
   const chatContainerRef = useRef(null);
@@ -59,7 +57,8 @@ const ChatBox = ({ isOpen, onClose }) => {
       >
         <CloseIcon className="closeIcon" onClick={onClose} />
         <h1 className="title">Matrix Media</h1>
-        <div className="chat">
+
+        {/* <div className="chat">
           <div className="chat_history" ref={chatContainerRef}>
             {messages &&
               messages?.map((msg, index) => (
@@ -71,6 +70,18 @@ const ChatBox = ({ isOpen, onClose }) => {
 
         <div className="chat-footer">
           <ChatInput onSendMessage={handleSendMessage} />
+        </div> */}
+
+        <div className="chat-app">
+          <div className="message-container">
+            {messages &&
+              messages?.map((msg, index) => (
+                <Message key={index} message={msg?.text} isUser={msg?.isUser} />
+              ))}
+          </div>
+          <div className="input-container">
+            <ChatInput onSendMessage={handleSendMessage} />
+          </div>
         </div>
       </div>
     </>
