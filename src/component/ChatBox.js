@@ -7,7 +7,6 @@ import ChatInput from "./Chatinput";
 const ChatBox = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([]);
   const chatContainerRef = useRef(null);
-  const [isLoading, setIsLoading] = useState(false);
 
   // const handleSendMessage = async (message, isMe = false) => {
   //   setMessages((prev) => [...prev, { text: message, isUser: isMe }]);
@@ -27,12 +26,10 @@ const ChatBox = ({ isOpen, onClose }) => {
       ...prevMessages,
       { text: message, isUser: isMe },
     ]);
-    setIsLoading(true);
     // Scroll to the bottom after a short delay
     setTimeout(() => {
       scrollToBottom();
     }, 100);
-    setIsLoading(false);
   };
 
   useEffect(() => {
